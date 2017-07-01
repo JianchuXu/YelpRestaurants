@@ -15,6 +15,8 @@
 		1CD329F81F073A4600858A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD329F61F073A4600858A6D /* LaunchScreen.storyboard */; };
 		1CD32A031F073A4700858A6D /* YelpStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD32A021F073A4700858A6D /* YelpStudyTests.m */; };
 		1CD32A0E1F073A4700858A6D /* YelpStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD32A0D1F073A4700858A6D /* YelpStudyUITests.m */; };
+		1CD32A1E1F073A9C00858A6D /* YelpNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD32A1D1F073A9C00858A6D /* YelpNetworking.m */; };
+		1CD32A221F074F6F00858A6D /* YelpDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD32A211F074F6F00858A6D /* YelpDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CD329E51F073A4600858A6D /* YelpStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD329E51F073A4600858A6D /* YelpRestaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpRestaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD329E91F073A4600858A6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CD329EB1F073A4600858A6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CD329EC1F073A4600858A6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,12 +47,16 @@
 		1CD329F41F073A4600858A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD329F71F073A4600858A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CD329F91F073A4600858A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CD329FE1F073A4700858A6D /* YelpStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD329FE1F073A4700858A6D /* YelpRestaurantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpRestaurantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD32A021F073A4700858A6D /* YelpStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YelpStudyTests.m; sourceTree = "<group>"; };
 		1CD32A041F073A4700858A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CD32A091F073A4700858A6D /* YelpStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD32A091F073A4700858A6D /* YelpRestaurantsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpRestaurantsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD32A0D1F073A4700858A6D /* YelpStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YelpStudyUITests.m; sourceTree = "<group>"; };
 		1CD32A0F1F073A4700858A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD32A1C1F073A9C00858A6D /* YelpNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpNetworking.h; sourceTree = "<group>"; };
+		1CD32A1D1F073A9C00858A6D /* YelpNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpNetworking.m; sourceTree = "<group>"; };
+		1CD32A201F074F6F00858A6D /* YelpDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpDataModel.h; sourceTree = "<group>"; };
+		1CD32A211F074F6F00858A6D /* YelpDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +87,9 @@
 		1CD329DC1F073A4600858A6D = {
 			isa = PBXGroup;
 			children = (
-				1CD329E71F073A4600858A6D /* YelpStudy */,
-				1CD32A011F073A4700858A6D /* YelpStudyTests */,
-				1CD32A0C1F073A4700858A6D /* YelpStudyUITests */,
+				1CD329E71F073A4600858A6D /* YelpRestaurants */,
+				1CD32A011F073A4700858A6D /* YelpRestaurantsTests */,
+				1CD32A0C1F073A4700858A6D /* YelpRestaurantsUITests */,
 				1CD329E61F073A4600858A6D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,16 +97,18 @@
 		1CD329E61F073A4600858A6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1CD329E51F073A4600858A6D /* YelpStudy.app */,
-				1CD329FE1F073A4700858A6D /* YelpStudyTests.xctest */,
-				1CD32A091F073A4700858A6D /* YelpStudyUITests.xctest */,
+				1CD329E51F073A4600858A6D /* YelpRestaurants.app */,
+				1CD329FE1F073A4700858A6D /* YelpRestaurantsTests.xctest */,
+				1CD32A091F073A4700858A6D /* YelpRestaurantsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1CD329E71F073A4600858A6D /* YelpStudy */ = {
+		1CD329E71F073A4600858A6D /* YelpRestaurants */ = {
 			isa = PBXGroup;
 			children = (
+				1CD32A1F1F074F3B00858A6D /* DataModel */,
+				1CD32A1B1F073A6A00858A6D /* Networking */,
 				1CD329EB1F073A4600858A6D /* AppDelegate.h */,
 				1CD329EC1F073A4600858A6D /* AppDelegate.m */,
 				1CD329EE1F073A4600858A6D /* ViewController.h */,
@@ -111,6 +119,7 @@
 				1CD329F91F073A4600858A6D /* Info.plist */,
 				1CD329E81F073A4600858A6D /* Supporting Files */,
 			);
+			name = YelpRestaurants;
 			path = YelpStudy;
 			sourceTree = "<group>";
 		};
@@ -122,30 +131,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1CD32A011F073A4700858A6D /* YelpStudyTests */ = {
+		1CD32A011F073A4700858A6D /* YelpRestaurantsTests */ = {
 			isa = PBXGroup;
 			children = (
 				1CD32A021F073A4700858A6D /* YelpStudyTests.m */,
 				1CD32A041F073A4700858A6D /* Info.plist */,
 			);
+			name = YelpRestaurantsTests;
 			path = YelpStudyTests;
 			sourceTree = "<group>";
 		};
-		1CD32A0C1F073A4700858A6D /* YelpStudyUITests */ = {
+		1CD32A0C1F073A4700858A6D /* YelpRestaurantsUITests */ = {
 			isa = PBXGroup;
 			children = (
 				1CD32A0D1F073A4700858A6D /* YelpStudyUITests.m */,
 				1CD32A0F1F073A4700858A6D /* Info.plist */,
 			);
+			name = YelpRestaurantsUITests;
 			path = YelpStudyUITests;
+			sourceTree = "<group>";
+		};
+		1CD32A1B1F073A6A00858A6D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1CD32A1C1F073A9C00858A6D /* YelpNetworking.h */,
+				1CD32A1D1F073A9C00858A6D /* YelpNetworking.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		1CD32A1F1F074F3B00858A6D /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CD32A201F074F6F00858A6D /* YelpDataModel.h */,
+				1CD32A211F074F6F00858A6D /* YelpDataModel.m */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1CD329E41F073A4600858A6D /* YelpStudy */ = {
+		1CD329E41F073A4600858A6D /* YelpRestaurants */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CD32A121F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpStudy" */;
+			buildConfigurationList = 1CD32A121F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpRestaurants" */;
 			buildPhases = (
 				1CD329E11F073A4600858A6D /* Sources */,
 				1CD329E21F073A4600858A6D /* Frameworks */,
@@ -155,14 +184,14 @@
 			);
 			dependencies = (
 			);
-			name = YelpStudy;
+			name = YelpRestaurants;
 			productName = YelpStudy;
-			productReference = 1CD329E51F073A4600858A6D /* YelpStudy.app */;
+			productReference = 1CD329E51F073A4600858A6D /* YelpRestaurants.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1CD329FD1F073A4700858A6D /* YelpStudyTests */ = {
+		1CD329FD1F073A4700858A6D /* YelpRestaurantsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CD32A151F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpStudyTests" */;
+			buildConfigurationList = 1CD32A151F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpRestaurantsTests" */;
 			buildPhases = (
 				1CD329FA1F073A4700858A6D /* Sources */,
 				1CD329FB1F073A4700858A6D /* Frameworks */,
@@ -173,14 +202,14 @@
 			dependencies = (
 				1CD32A001F073A4700858A6D /* PBXTargetDependency */,
 			);
-			name = YelpStudyTests;
+			name = YelpRestaurantsTests;
 			productName = YelpStudyTests;
-			productReference = 1CD329FE1F073A4700858A6D /* YelpStudyTests.xctest */;
+			productReference = 1CD329FE1F073A4700858A6D /* YelpRestaurantsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1CD32A081F073A4700858A6D /* YelpStudyUITests */ = {
+		1CD32A081F073A4700858A6D /* YelpRestaurantsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CD32A181F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpStudyUITests" */;
+			buildConfigurationList = 1CD32A181F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpRestaurantsUITests" */;
 			buildPhases = (
 				1CD32A051F073A4700858A6D /* Sources */,
 				1CD32A061F073A4700858A6D /* Frameworks */,
@@ -191,9 +220,9 @@
 			dependencies = (
 				1CD32A0B1F073A4700858A6D /* PBXTargetDependency */,
 			);
-			name = YelpStudyUITests;
+			name = YelpRestaurantsUITests;
 			productName = YelpStudyUITests;
-			productReference = 1CD32A091F073A4700858A6D /* YelpStudyUITests.xctest */;
+			productReference = 1CD32A091F073A4700858A6D /* YelpRestaurantsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +250,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1CD329E01F073A4600858A6D /* Build configuration list for PBXProject "YelpStudy" */;
+			buildConfigurationList = 1CD329E01F073A4600858A6D /* Build configuration list for PBXProject "YelpRestaurants" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,9 +263,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CD329E41F073A4600858A6D /* YelpStudy */,
-				1CD329FD1F073A4700858A6D /* YelpStudyTests */,
-				1CD32A081F073A4700858A6D /* YelpStudyUITests */,
+				1CD329E41F073A4600858A6D /* YelpRestaurants */,
+				1CD329FD1F073A4700858A6D /* YelpRestaurantsTests */,
+				1CD32A081F073A4700858A6D /* YelpRestaurantsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CD329F01F073A4600858A6D /* ViewController.m in Sources */,
+				1CD32A1E1F073A9C00858A6D /* YelpNetworking.m in Sources */,
 				1CD329ED1F073A4600858A6D /* AppDelegate.m in Sources */,
+				1CD32A221F074F6F00858A6D /* YelpDataModel.m in Sources */,
 				1CD329EA1F073A4600858A6D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,12 +331,12 @@
 /* Begin PBXTargetDependency section */
 		1CD32A001F073A4700858A6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1CD329E41F073A4600858A6D /* YelpStudy */;
+			target = 1CD329E41F073A4600858A6D /* YelpRestaurants */;
 			targetProxy = 1CD329FF1F073A4700858A6D /* PBXContainerItemProxy */;
 		};
 		1CD32A0B1F073A4700858A6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1CD329E41F073A4600858A6D /* YelpStudy */;
+			target = 1CD329E41F073A4600858A6D /* YelpRestaurants */;
 			targetProxy = 1CD32A0A1F073A4700858A6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -452,7 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jianchu.YelpStudyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YelpStudy.app/YelpStudy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YelpRestaurants.app/YelpRestaurants";
 			};
 			name = Debug;
 		};
@@ -464,7 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jianchu.YelpStudyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YelpStudy.app/YelpStudy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YelpRestaurants.app/YelpRestaurants";
 			};
 			name = Release;
 		};
@@ -493,7 +524,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1CD329E01F073A4600858A6D /* Build configuration list for PBXProject "YelpStudy" */ = {
+		1CD329E01F073A4600858A6D /* Build configuration list for PBXProject "YelpRestaurants" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CD32A101F073A4700858A6D /* Debug */,
@@ -502,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CD32A121F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpStudy" */ = {
+		1CD32A121F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpRestaurants" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CD32A131F073A4700858A6D /* Debug */,
@@ -510,7 +541,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		1CD32A151F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpStudyTests" */ = {
+		1CD32A151F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpRestaurantsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CD32A161F073A4700858A6D /* Debug */,
@@ -518,7 +549,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		1CD32A181F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpStudyUITests" */ = {
+		1CD32A181F073A4700858A6D /* Build configuration list for PBXNativeTarget "YelpRestaurantsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CD32A191F073A4700858A6D /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1CD329E41F073A4600858A6D"
-               BuildableName = "YelpStudy.app"
-               BlueprintName = "YelpStudy"
-               ReferencedContainer = "container:YelpStudy.xcodeproj">
+               BuildableName = "YelpRestaurants.app"
+               BlueprintName = "YelpRestaurants"
+               ReferencedContainer = "container:YelpRestaurants.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1CD329FD1F073A4700858A6D"
-               BuildableName = "YelpStudyTests.xctest"
-               BlueprintName = "YelpStudyTests"
-               ReferencedContainer = "container:YelpStudy.xcodeproj">
+               BuildableName = "YelpRestaurantsTests.xctest"
+               BlueprintName = "YelpRestaurantsTests"
+               ReferencedContainer = "container:YelpRestaurants.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1CD32A081F073A4700858A6D"
-               BuildableName = "YelpStudyUITests.xctest"
-               BlueprintName = "YelpStudyUITests"
-               ReferencedContainer = "container:YelpStudy.xcodeproj">
+               BuildableName = "YelpRestaurantsUITests.xctest"
+               BlueprintName = "YelpRestaurantsUITests"
+               ReferencedContainer = "container:YelpRestaurants.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1CD329E41F073A4600858A6D"
-            BuildableName = "YelpStudy.app"
-            BlueprintName = "YelpStudy"
-            ReferencedContainer = "container:YelpStudy.xcodeproj">
+            BuildableName = "YelpRestaurants.app"
+            BlueprintName = "YelpRestaurants"
+            ReferencedContainer = "container:YelpRestaurants.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1CD329E41F073A4600858A6D"
-            BuildableName = "YelpStudy.app"
-            BlueprintName = "YelpStudy"
-            ReferencedContainer = "container:YelpStudy.xcodeproj">
+            BuildableName = "YelpRestaurants.app"
+            BlueprintName = "YelpRestaurants"
+            ReferencedContainer = "container:YelpRestaurants.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1CD329E41F073A4600858A6D"
-            BuildableName = "YelpStudy.app"
-            BlueprintName = "YelpStudy"
-            ReferencedContainer = "container:YelpStudy.xcodeproj">
+            BuildableName = "YelpRestaurants.app"
+            BlueprintName = "YelpRestaurants"
+            ReferencedContainer = "container:YelpRestaurants.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
