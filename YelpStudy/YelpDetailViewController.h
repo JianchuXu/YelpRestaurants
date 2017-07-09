@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YelpDataModel.h"
 
-@interface DetailYelpViewController : UIViewController
+@interface YelpDetailViewController : UIViewController
 
 - (instancetype)initWithDataModel:(YelpDataModel *)dataModel;
 

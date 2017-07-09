@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  YelpViewController.m
 //  YelpStudy
 //
 //  Created by JIANCHU XU on 6/30/17.
@@ -9,15 +9,22 @@
 #import "YelpViewController.h"
 #import "YelpNetworking.h"
 #import "YelpTableViewCell.h"
+#import "YelpDataStore.h"
+#import "YelpDetailViewController.h"
 
 
-@interface YelpViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@interface YelpViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic) UITableView *tableView;
 @property (nonatomic, copy) NSArray <YelpDataModel *> *dataModels;
 @property (nonatomic) UISearchBar *searchBar;
+@property (nonatomic, strong) CLLocation *userLocation;
+
 @end
 
-@implementation ViewController
+@implementation YelpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +41,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"YelpTableViewCell" bundle:nil] forCellReuseIdentifier:@"YelpViewCell"];
     
     CLLocation *loc = [[CLLocation alloc] initWithLatitude:37.331566 longitude:-122.032744];
@@ -44,6 +51,12 @@
             [self.tableView reloadData];
         });
     }];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
+    
 }
 
 
@@ -63,16 +76,13 @@
     return 100;
 }
 
-//#pragma mark - UITableViewDataSource
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    YelpTableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"YelpViewCell"];
-//    
-//    
-//    cell.textLabel.text = self.dataModels[indexPath.row].name;
-//    cell.detailTextLabel.text = self.dataModels[indexPath.row].displayAddress;
-//    return cell;
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YelpDetailViewController *detailVC = [[YelpDetailViewController alloc] initWithDataModel:self.dataModels[indexPath.row]];
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,6 +138,42 @@
     [searchBar resignFirstResponder];
     [self.view endEditing:YES];
 }
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    if (error) {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Oops..."
+                                                                       message:@"Failed to Get Location"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    CLLocation *currentLocation = newLocation;
+    self.userLocation = currentLocation;
+    [[YelpDataStore sharedInstance] setUserLocation:currentLocation];
+    
+    [manager stopUpdatingLocation];
+    
+    NSLog(@"current location %lf %lf", self.userLocation.coordinate.latitude, self.userLocation.coordinate.longitude);
+    [[YelpNetworking sharedInstance] fetchRestaurantsBasedOnLocation:currentLocation term:@"restaurant" completionBlock:^(NSArray<YelpDataModel *> *dataModelArray) {
+        self.dataModels = dataModelArray;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+}
+
 
 
 

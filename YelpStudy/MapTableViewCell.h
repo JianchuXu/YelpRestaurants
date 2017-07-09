@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YelpDataModel.h"
 
 @interface MapTableViewCell : UITableViewCell
+
+- (void)updateBasedOnDataModel:(YelpDataModel *)dataModel;
 
 @end

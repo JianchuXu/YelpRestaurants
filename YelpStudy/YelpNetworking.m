@@ -7,6 +7,7 @@
 //
 
 #import "YelpNetworking.h"
+#import "YelpDataStore.h"
 
 static NSString const * kGrantType = @"client_credentials";
 static NSString const * kClient_id = @"_3UAE0CZm627VvDEhtfZTQ";
@@ -63,7 +64,7 @@ typedef void (^TokenPendingTask)(NSString *token);
 
 - (void)fetchRestaurantsBasedOnLocation:(CLLocation *)location term:(NSString *)term completionBlock:(RestaurantCompletionBlock)completionBlock
 {
-        TokenPendingTask tokenTask = ^(NSString *token){
+    TokenPendingTask tokenTask = ^(NSString *token){
         NSString *string = [NSString stringWithFormat:@"https://api.yelp.com/v3/businesses/search?term=%@&latitude=%.6f&longitude=%.6f",term, location.coordinate.latitude, location.coordinate.longitude];
         
         NSURL *url = [NSURL URLWithString:string];
@@ -81,8 +82,14 @@ typedef void (^TokenPendingTask)(NSString *token);
         NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NULL error:nil];
+            if (!error && dict) {
+                NSArray<YelpDataModel *> *dataModelArray = [YelpDataModel buildDataModelArrayFromDictionaryArray:dict[@"businesses"]];
+                [YelpDataStore sharedInstance].dataModels = dataModelArray;
+                
+                completionBlock(dataModelArray);
+            }
             if (!error) {
-               completionBlock([YelpDataModel buildDataModelArrayFromDictionaryArray:dict[@"businesses"]]);
+                completionBlock([YelpDataModel buildDataModelArrayFromDictionaryArray:dict[@"businesses"]]);
             }
             
         }];
